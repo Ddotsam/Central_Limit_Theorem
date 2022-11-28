@@ -30,3 +30,7 @@ Now that you get the idea, lets see the histogram where we roll lots of dice and
 <img src="images/hist_many_dice.png" alt="Histogram after summing across many dice" width="300"/>
 
 As you can see, it looks like our histograms are approaching some shape. The Central Limit Theorem confirms our intution: as the number of dice that we roll increases, we are going to get closer and closer to a normally shapped curve. This is because in order for us to get a sum near the theoretical minimum, we must roll each die near its minimum; however, there are many possible ways to get a sum close to the middle of the distribution: we could roll all the dice in the middle of the distribution, or we could roll half the dice on the high end and the other half on the low end, etc.
+
+## The Central Limit Theorem
+
+Interestingly, the Central Limit Theorem isn't just intuitive in everyday life; it is intuitive in math as well. Consider what happens when we sum across variables that we know are normally dsitributed $$X_{1}\sim\mathcal{N}(\mu_{1},\sigma_{1}^{2}),X_{2}\sim\mathcal{N(\mu_{2},\sigma_{2}^{2})\Rightarrow X_{1}+X_{2}\sim\mathcal{N}(\mu_{1}+\mu_{2},\sigma^{2}_{1}+\sigma_{2}^{2}$$
