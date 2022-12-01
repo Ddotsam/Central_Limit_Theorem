@@ -51,6 +51,8 @@ Next, lets calculate the expected value and the variance for a group with $n$ ra
 
 Next, let's try standardizing or normalizing $Y_{n}$ and $Y_{2n}$. That is, let's center them by their means and scale them down by their standard deviations, and then notate this new random variable by $Y^{*}_{n}$ and $Y^{*}_{2n}$, respectively.
 
-<img src="images/CLT_Ystar.png" alt="Deriving expected values and variences" width="700"/>
+<p align="center">
+  <img src="images/CLT_Ystar.png" alt="Deriving expected values and variences" width="700"/>
+</p>
 
 While these two variables came from any given distribution with defined expected value and variance, it seems like they might converge onto the same distribution. Even more remarkable is the realization that doubling the observations scaled $Y^{*}$ by $\sqrt2$---a vestige of the Gaussian Distribution! It really seems like the math is pointing us in the direction of the Central Limit Theorem, but we need to formalize this concept to be sure.
