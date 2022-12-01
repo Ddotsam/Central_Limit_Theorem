@@ -33,4 +33,22 @@ As you can see, it looks like our histograms are approaching some shape. The Cen
 
 ## The Central Limit Theorem
 
-Interestingly, the Central Limit Theorem isn't just intuitive in everyday life; it is intuitive in math as well. Consider what happens when we sum across variables that we know are normally dsitributed $$X_{1}\sim\mathcal{N}(\mu_{1},\sigma_{1}^{2}),X_{2}\sim\mathcal{N(\mu_{2},\sigma_{2}^{2})\Rightarrow X_{1}+X_{2}\sim\mathcal{N}(\mu_{1}+\mu_{2},\sigma^{2}_{1}+\sigma_{2}^{2}$$
+Interestingly, the Central Limit Theorem isn't just intuitive in everyday life; it is intuitive in math as well. Consider what happens when we sum across variables that we know are normally dsitributed 
+
+$$X_{1}\sim\mathcal{N}(\mu_{1},\sigma_{1}^{2}),X_{2}\sim\mathcal{N}(\mu_{2},\sigma_{2}^{2})\Rightarrow X_{1}+X_{2}\sim\mathcal{N}(\mu_{1}+\mu_{2},\sigma^{2}_{1}+\sigma_{2}^{2})$$
+
+Additionally, we know that you can scale a normally distributed variable
+
+$$X\sim\mathcal{N}(\mu,\sigma^{2})\Rightarrow cX\sim\mathcal{N}(c\mu,c^{2}\sigma^{2}$$
+
+Therefore, knowing how the normal distribution behaves, we can essentially 'discover' the distribution using these rules. For example, the equation $\mathcal{N}(0,1)+\mathcal{N}(0,1)=\sqrt{2}\mathcal{N}(0,1)$ in essence defines what $\mathcal{N}(0,1)$ is (up to scaling, at least), after which the entire distrubtion can be uncovered.
+
+Now, let ${X_{1},\dots,X_{n}}$ be a sequence of normalized, independent, identitcally distributed random variables. Assume that, upon summing these up, they converge to a hypothetical distribution $\mathcal{D}$. Then, from the equations
+
+$$\frac{X_{1}+\dots+X_{n}}{\sqrt{n}}\to\mathcal{D}$$
+
+and
+
+$$\frac{X_{1}+\dots+X_{2n}}{\sqrt{2n}}\to\mathcal{D}$$
+
+we would expect $\mathcal{D}+\mathcal{D}=\sqrt{2}\mathcal{D}$, so it makes sense that $\mathcal{D}$ must be normal. 
