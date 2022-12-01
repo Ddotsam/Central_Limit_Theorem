@@ -19,7 +19,7 @@ Below is a two-way table of all the possible rolls with their sums and a histogr
 
 Now, consider what will happen if we roll three six-sided dice and then take the sum. Then, there would be only one way to get a sum of 3 (rolling all 1's), and only one way to get a sum of 18 (rolling all 6's). Below is a histogram of what we get after computing all of the possible sums and their frequencies.
 
-<img src="images/hist_3_dice.png" alt="Histogram of the sums for 3 dice" width="300"/>
+<img align="center" src="images/hist_3_dice.png" alt="Histogram of the sums for 3 dice" width="300"/>
 
 What if we roll four dice instead of three?
 
