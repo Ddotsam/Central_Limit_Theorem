@@ -35,7 +35,7 @@ As you can see, it looks like our histograms are approaching some shape. The Cen
 
 Most interestingly, the Central Limit Theorem isn't just intuitive in everyday life; it is intuitive in math as well. Consider what happens when we sum across variables that we know are normally dsitributed 
 
-$$X_{1}\sim\mathcal{N}(\mu_{1},\sigma_{1}^{2}),X_{2}\sim\mathcal{N}(\mu_{2},\sigma_{2}^{2})\Rightarrow X_{1}+X_{2}\sim\mathcal{N}(\mu_{1}+\mu_{2},\sigma^{2}_{1}+\sigma_{2}^{2})$$
+$$X_{1}\sim\mathcal{N}(\mu_{1},\sigma_{1}^{2}),X_{2}\sim\mathcal{N}(\mu_{2},\sigma_{2}^{2})\Rightarrow X_{1}+X_{2}\sim\mathcal{N}(\mu_{1}+\mu_{2},\sigma_{1}^{2}+\sigma_{2}^{2})$$
 
 Additionally, we know that you can scale a normally distributed variable
 
