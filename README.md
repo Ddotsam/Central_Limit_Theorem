@@ -33,22 +33,24 @@ As you can see, it looks like our histograms are approaching some shape. The Cen
 
 ## The Central Limit Theorem
 
-Interestingly, the Central Limit Theorem isn't just intuitive in everyday life; it is intuitive in math as well. Consider what happens when we sum across variables that we know are normally dsitributed 
+Most interestingly, the Central Limit Theorem isn't just intuitive in everyday life; it is intuitive in math as well. Consider what happens when we sum across variables that we know are normally dsitributed 
 
 $$X_{1}\sim\mathcal{N}(\mu_{1},\sigma_{1}^{2}),X_{2}\sim\mathcal{N}(\mu_{2},\sigma_{2}^{2})\Rightarrow X_{1}+X_{2}\sim\mathcal{N}(\mu_{1}+\mu_{2},\sigma^{2}_{1}+\sigma_{2}^{2})$$
 
 Additionally, we know that you can scale a normally distributed variable
 
-$$X\sim\mathcal{N}(\mu,\sigma^{2})\Rightarrow cX\sim\mathcal{N}(c\mu,c^{2}\sigma^{2}$$
+$$X\sim\mathcal{N}(\mu,\sigma^{2})\Rightarrow cX\sim\mathcal{N}(c\mu,c^{2}\sigma^{2})$$
 
 Therefore, knowing how the normal distribution behaves, we can essentially 'discover' the distribution using these rules. For example, the equation $\mathcal{N}(0,1)+\mathcal{N}(0,1)=\sqrt{2}\mathcal{N}(0,1)$ in essence defines what $\mathcal{N}(0,1)$ is (up to scaling, at least), after which the entire distrubtion can be uncovered.
 
-Now, let ${X_{1},\dots,X_{n}}$ be a sequence of normalized, independent, identitcally distributed random variables. Assume that, upon summing these up, they converge to a hypothetical distribution $\mathcal{D}$. Then, from the equations
+For example, lets say that we are taking the mean of a set of independent, identically distributed (i.i.d.) random variables, $\{X_{1},X_{2},\dots,X_{n}\}$ with $E[X_{i}]=\mu$ and $Var(X_{i})=\sigma^{2}<\infty$. Next, lets specify $Y$ to be the mean of these random variables, that is: $$Y=\frac1n\sum_{i=1}^{n}X_{i}$$
 
-$$\frac{X_{1}+\dots+X_{n}}{\sqrt{n}}\to\mathcal{D}$$
+Next, lets calculate the expected value and the variance for a group with $n$ random variables and a group with $2n$ random variables. So, $Y_{n}$ is the group of i.i.d. random variables of size $n$ and $Y_{2n}$ is the group of i.i.d. random variable of size $2n$.
 
-and
+<img src="images/CLT_Y_E.png" alt="Deriving expected values and variences" width="700"/>
 
-$$\frac{X_{1}+\dots+X_{2n}}{\sqrt{2n}}\to\mathcal{D}$$
+Next, let's try standardizing or normalizing $Y_{n}$ and $Y_{2n}$. That is, let's center them by their means and scale them down by their standard deviations, and then notate this new random variable by $Y^{*}_{n}$ and $Y^{*}_{2n}$, respectively.
 
-we would expect $\mathcal{D}+\mathcal{D}=\sqrt{2}\mathcal{D}$, so it makes sense that $\mathcal{D}$ must be normal. 
+<img src="images/CLT_Ystar.png" alt="Deriving expected values and variences" width="700"/>
+
+While these two variables came from any given distribution with defined expected value and variance, it seems like they might converge onto the same distribution. Even more remarkable is the realization that doubling the observations scaled $Y^{*}$ by $\sqrt2$---a vestige of the Gaussian Distribution! It really seems like the math is pointing us in the direction of the Central Limit Theorem, but we need to formalize this concept to be sure.
