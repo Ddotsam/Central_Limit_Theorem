@@ -49,7 +49,7 @@ Next, lets calculate the expected value and the variance for a group with $n$ ra
 
 <img src="images/CLT_Y_E.png" alt="Deriving expected values and variences" width="700"/>
 
-Next, let's try standardizing or normalizing $Y_{n}$ and $Y_{2n}$. That is, let's center them by their means and scale them down by their standard deviations, and then notate this new random variable by $Y^{*}_{n}$ and $Y^{*}_{2n}$, respectively.
+Next, let's try standardizing or normalizing $Y_{n}$ and $Y_{2n}$. That is, let's center them by their means and scale them down by their standard deviations, and then notate this new random variable by $Y^{\*}$ and $Y^{\*}_{2n}$, respectively.
 
 <p align="center">
   <img src="images/CLT_Ystar.png" alt="Deriving expected values and variences" width="700"/>
