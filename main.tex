@@ -1,0 +1,86 @@
+\documentclass{article}
+
+% Language setting
+% Replace `english' with e.g. `spanish' to change the document language
+\usepackage[english]{babel}
+
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+% Useful packages
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{mathtools}
+\usepackage{multicol}
+\usepackage[export]{adjustbox}
+
+\title{Homework 33}
+\author{Mason Flannery}
+
+\begin{document}
+\maketitle
+Notice that this is pretty intuitive in the math as well as reality. For example, lets say that we are taking the mean of a set of independent, identically distributed (i.i.d.) random variables, $\{X_{1},X_{2},\dots,X_{n}\}$ with $E[X_{i}]=\mu$ and $Var(X_{i})=\sigma^{2}<\infty$. Next, lets specify $Y$ to be the mean of these random variables, that is: $$Y=\frac1n\sum_{i=1}^{n}X_{i}$$
+
+Next, lets calculate the expected value and the variance for a group with $n$ random variables and a group with $2n$ random variables. So, $Y_{n}$ is the group of i.i.d. random variables of size $n$ and $Y_{2n}$ is the group of i.i.d. random variable of size $2n$.
+\begin{multicols}{2}
+\begin{align*}
+    E[Y_{n}]&=E\left[\frac1n\sum_{i=1}^{n}X_{i}\right]\\
+    &=\frac1n E\left[\sum_{i=1}^{n}X_{i}\right]\\
+    &=\frac1n\sum_{i=1}^{n}E[X_{i}]\\
+    &=\frac1n\sum_{i=1}^{n}\mu\\
+    &=\frac{n\mu}{n}\\
+    &=\mu\\
+    Var(Y_{n})&=Var\left(\frac1n\sum_{i=1}^{n}X_{i}\right)\\
+    &=\frac{1}{n^{2}}Var\left(\sum_{i=1}^{n}X_{i}\right)\\
+    &=\frac{1}{n^{2}}\sum^{n}_{i=1}Var(X_{i})\\
+    &=\frac{1}{n^{2}}\sum^{n}_{i=1}\sigma^{2}\\
+    &=\frac{n\sigma^{2}}{n^{2}}\\
+    &=\frac{\sigma^{2}}{n}
+\end{align*}
+\columnbreak
+\begin{align*}
+ \\
+    E[Y_{2n}]&=E\left[\frac1{2n}\sum_{i=1}^{2n}X_{i}\right]\\
+    &=\frac1{2n} E\left[\sum_{i=1}^{2n}X_{i}\right]\\
+    &=\frac1{2n}\sum_{i=1}^{2n}E[X_{i}]\\
+    &=\frac1{2n}\sum_{i=1}^{2n}\mu\\
+    &=\frac{2n\mu}{2n}\\
+    &=\mu\\
+Var(Y_{2n})&=Var\left(\frac{1}{2n}\sum_{i=1}^{2n}X_{i}\right)\\
+    &=\frac{1}{4n^{2}}Var\left(\sum_{i=1}^{2n}X_{i}\right)\\
+    &=\frac{1}{4n^{2}}\sum^{2n}_{i=1}Var(X_{i})\\
+    &=\frac{1}{4n^{2}}\sum^{2n}_{i=1}\sigma^{2}\\
+    &=\frac{2n\sigma^{2}}{4n^{2}}\\
+    &=\frac{\sigma^{2}}{2n}
+\end{align*}
+\end{multicols}
+
+In conclusion, we have that
+\begin{equation*}
+    \begin{array}{cc}
+        E[Y_{n}]=\mu & Var(Y_{n})=\frac{\sigma^{2}}{n} \\
+        E[Y_{2n}]=\mu & Var(Y_{2n})=\frac{\sigma^{2}}{2n}
+    \end{array}
+\end{equation*}
+
+Next, let's try standardizing or normalizing $Y_{n}$ and $Y_{2n}$. That is, let's center them by their means and scale them down by their standard deviations, and then notate this new random variable by $Y^{*}_{n}$ and $Y^{*}_{2n}$, respectively.
+
+\begin{multicols}{2}
+\begin{align*}
+    Y^{*}_{n}&=\frac{Y_{n}-E[Y_{n}]}{\sqrt{Var(Y_{n}}}\\
+    &=\frac{Y_{n}-\mu}{\sqrt{\frac{\sigma^{2}}{n}}}\\
+    &=\frac{\sqrt{n}(Y_{n}-\mu)}{\sigma}
+\end{align*}
+\columnbreak
+\begin{align*}
+ \\
+    Y^{*}_{2n}&=\frac{Y_{2n}-E[Y_{2n}]}{\sqrt{Var(Y_{2n}}}\\
+    &=\frac{Y_{2n}-\mu}{\sqrt{\frac{\sigma^{2}}2{n}}}\\
+    &=\frac{\sqrt{2n}(Y_{n}-\mu)}{\sigma}
+\end{align*}
+\end{multicols}
+
+While these two variables came from any given distribution with defined expected value and variance, it seems like they might converge onto the same distribution. Even more remarkable is the realization that doubling the observations scaled $Y^{*}$ by $\sqrt2$---a vestige of the Gaussian Distribution! It really seems like the math is pointing us in the direction of the Central Limit Theorem, but we need to formalize this concept to be sure.
+
+\end{document}
